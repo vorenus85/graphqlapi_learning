@@ -35,4 +35,5 @@ type Session {
     format: String,
     track: String @deprecated(reason: "just deprecated"),
     level: String
+    speakers: [Speaker]
 }`
