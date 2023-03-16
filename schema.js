@@ -8,7 +8,7 @@ type Query {
         description: String,
         startsAt: String,
         endsAt: String,
-        room: String,
+        room: Room,
         day: String,
         format: String,
         track: String,
@@ -39,6 +39,12 @@ input SessionInput {
     track: String @deprecated(reason: "just deprecated"),
     level: String
     favorite: Boolean
+}
+# the convention for enum is use all capital letters!
+enum Room {
+    EUROPA
+    SOL
+    SATURN
 }
 type Session {
     id: ID!,
